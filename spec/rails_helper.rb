@@ -68,7 +68,7 @@ RSpec.configure do |config|
       Capybara::Screenshot.register_filename_prefix_formatter(:cucumber) do |example|
         '/#{example.feature.name.gsub(' ', '-').gsub(/^.*\/spec\//,'')}/screenshot_#{example.name.gsub(' ', '-').gsub(/^.*\/spec\//,'')}'
       end
-      screenshot_and_save_page
+      screenshot_and_save_page if example.exception
     end
   end
 end

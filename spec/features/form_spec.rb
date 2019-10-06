@@ -24,11 +24,11 @@ RSpec.feature 'Forms', type: :feature do
     end
 
     with_them do
-    it 'fail' do
-      visit 'login'
-      login(name, pass)
-      check_fail_message
-    end
+      it 'fail' do
+        visit 'login'
+        login(name, pass)
+        check_fail_message
+      end
     end
   end
 
