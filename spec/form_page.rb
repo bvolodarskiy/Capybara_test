@@ -9,7 +9,7 @@ class Form
   FAIL_MESSAGE = { css: '.flash.error' }.freeze
   SUCCESS_TEXT = 'You logged into a secure area!'
   FAIL_TEXT = 'Your username is invalid!'
-  FAIL_PASSWORD_TEXT = ''
+  FAIL_PASSWORD_TEXT = 'Your password is invalid!'
   LOGIN_FORM = { id: 'login' }.freeze
   LOGOUT_BUTTON = { class: 'button secondary radius' }.freeze
   LOGOUT_TEXT = 'You logged out of the secure area!'
