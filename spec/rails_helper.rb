@@ -1,4 +1,5 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
+# frozen_string_literal: true
+
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
@@ -62,9 +63,7 @@ RSpec.configure do |config|
   #
   config.after do |example|
     if example.metadata[:type] == :feature
-      # save_and_open_page
-      #save_and_open_screenshot
-      Capybara::save_path = './spec/screenshots'
+      Capybara.save_path = './spec/screenshots'
       Capybara::Screenshot.register_filename_prefix_formatter(:cucumber) do |example|
         '/#{example.feature.name.gsub(' ', '-').gsub(/^.*\/spec\//,'')}/screenshot_#{example.name.gsub(' ', '-').gsub(/^.*\/spec\//,'')}'
       end
@@ -73,11 +72,10 @@ RSpec.configure do |config|
   end
 end
 
-
 Capybara.run_server = false
-Capybara.app_host = "https://the-internet.herokuapp.com"
+Capybara.app_host = 'https://the-internet.herokuapp.com'
 Capybara.configure do |config|
-  config.default_max_wait_time = 5 #seconds
+  config.default_max_wait_time = 5
   config.default_driver = :selenium
   config.always_include_port = true
- end
+end

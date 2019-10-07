@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class Form
-  attr_reader :username_field, :password_field, :submit_button, :success_message, :fail_message, :success_text, :fail_text, :login_form, :logout_button, :logout_text, :fail_password_text
+  attr_reader :username_field, :password_field, :submit_button,
+              :success_message, :fail_message, :success_text, :fail_text,
+              :login_form, :logout_button, :logout_text, :fail_password_text
   USERNAME_FIELD = 'username'
   PASSWORD_FIELD = 'password'
   SUBMIT_BUTTON = { class: 'radius' }.freeze

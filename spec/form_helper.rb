@@ -9,7 +9,7 @@ def initialize
 end
 
 # @return [Object]
-def get_data_from_file
+def data_from_file
   path = File.expand_path('test_data/negative_cases.csv', File.dirname(__FILE__))
   table_csv = CSV.parse(File.read(path), headers: true)
   table = RSpec::Parameterized::Table.new
@@ -37,8 +37,6 @@ def check_excepted_content(*args)
   else
     expect(page).to have_selector(args[0].keys[0], args[0].values[0], text: args[1])
   end
-
-
 end
 
 def check_success_message
