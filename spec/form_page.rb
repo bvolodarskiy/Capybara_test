@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Form
-  attr_reader :username_field, :password_field, :submit_button, :success_message, :fail_message, :success_text, :fail_text, :login_form, :logout_button, :logout_text
+  attr_reader :username_field, :password_field, :submit_button, :success_message, :fail_message, :success_text, :fail_text, :login_form, :logout_button, :logout_text, :fail_password_text
   USERNAME_FIELD = 'username'
   PASSWORD_FIELD = 'password'
   SUBMIT_BUTTON = { class: 'radius' }.freeze
@@ -9,6 +9,7 @@ class Form
   FAIL_MESSAGE = { css: '.flash.error' }.freeze
   SUCCESS_TEXT = 'You logged into a secure area!'
   FAIL_TEXT = 'Your username is invalid!'
+  FAIL_PASSWORD_TEXT = ''
   LOGIN_FORM = { id: 'login' }.freeze
   LOGOUT_BUTTON = { class: 'button secondary radius' }.freeze
   LOGOUT_TEXT = 'You logged out of the secure area!'
@@ -23,5 +24,6 @@ class Form
     @login_form = LOGIN_FORM
     @logout_button = LOGOUT_BUTTON
     @logout_text = LOGOUT_TEXT
+    @fail_password_text = FAIL_PASSWORD_TEXT
   end
 end

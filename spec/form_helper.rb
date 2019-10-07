@@ -49,6 +49,10 @@ def check_fail_message
   check_excepted_content(@form.fail_message, @form.fail_text)
 end
 
+def check_password_fail_message
+  check_excepted_content(@form.fail_message, @form.fail_password_text)
+end
+
 def login_page?
   check_excepted_content(@form.login_form)
 end

@@ -17,6 +17,11 @@ RSpec.feature 'Forms', type: :feature do
         end
 
 
+    it 'right name wrong pass' do
+      visit 'login'
+      login('tomsmith', 'test')
+      check_password_fail_message
+    end
 
     table = get_data_from_file
     where(:name, :pass) do
