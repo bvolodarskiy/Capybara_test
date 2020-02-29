@@ -139,7 +139,7 @@ GEM
       unparser
     procto (0.0.3)
     public_suffix (4.0.1)
-    puma (3.12.1)
+    puma (3.12.3)
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -284,7 +284,7 @@ DEPENDENCIES
   chromedriver-helper
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 6.0.0)
   rspec-parameterized
   rspec-rails
